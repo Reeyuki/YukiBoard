@@ -8,10 +8,25 @@ SECTION#image-list .blockbody {
 	text-align: left;
 }
 .shm-image-list {
-	display: grid;
-	grid-template-columns: repeat( auto-fill, calc(var(--thumb-width) + 42px) );
-	place-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, calc(var(--thumb-width) + 42px));
+  place-items: center;
 }
+
+@media (max-width: 600px) {
+  .shm-image-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
 .shm-image-list .thumb {
 	margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .shm-image-list img {
+	width: 300px;
+    height: auto;
+  }
 }

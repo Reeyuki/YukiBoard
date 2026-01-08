@@ -84,6 +84,11 @@ BODY.layout-grid {
 	grid-gap: 1rem;
 }
 
+body.mobile-layout.layout-grid {
+    display: unset;
+}
+
+
 HEADER {
 	grid-column: 1 / 3;
 	grid-row: 1;
@@ -191,7 +196,7 @@ NAV {
 	text-align: center;
 }
 NAV .blockbody {
-	font-size: 0.85rem;
+	font-size: clamp(1rem, 1.5vw, 1rem);
 	text-align: center;
 	overflow: hidden;
 }

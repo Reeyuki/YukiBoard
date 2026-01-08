@@ -17,6 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
         el.addEventListener("keydown", () => autosize(el));
         autosize(el);
     });
+    const container = document.getElementById("handle_image_media")
+    const nav = document.getElementById("Navigationleft")
+
+    if (container && nav) {
+        container.insertBefore(nav, container.firstChild)
+    }
+
+    function updateLayout() {
+        if (/Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent)) {
+            document.body.classList.add('mobile-layout');
+        } else {
+            document.body.classList.remove('mobile-layout');
+        }
+    }
+
+    window.addEventListener('resize', updateLayout);
+    updateLayout();
+
+
 });
 
 /**

@@ -353,12 +353,12 @@ trait Page_Page
                 H1($this->heading),
                 ...$sub_block_html
             ),
-            NAV(
-                ...$left_block_html
-            ),
             ARTICLE(
                 $flash_html,
                 ...$main_block_html
+            ),
+            NAV(
+                ...$left_block_html
             ),
             FOOTER(
                 $footer_html
